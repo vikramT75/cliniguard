@@ -1,0 +1,1577 @@
+{
+  "notes": 300,
+  "configs": {
+    "Presidio default (threshold 0)": {
+      "entities": 2135,
+      "recall_any_overlap": 0.9475,
+      "recall_full": 0.8501,
+      "precision": 0.6926,
+      "note_leak_rate": 0.67,
+      "per_label_recall_full": {
+        "ADDRESS": 0.1805,
+        "DATE": 0.8113,
+        "DATE_OF_BIRTH": 0.9521,
+        "DEA": 1.0,
+        "EMAIL": 1.0,
+        "LOCATION": 0.9023,
+        "MEMBER_ID": 0.1091,
+        "MRN": 1.0,
+        "NPI": 1.0,
+        "PERSON": 0.9564,
+        "PHONE": 0.9149,
+        "SSN": 1.0,
+        "ZIP": 0.5564
+      },
+      "latency": {
+        "p50_ms": 37.6,
+        "p95_ms": 52.66,
+        "mean_ms": 38.46
+      },
+      "sample_misses": [
+        {
+          "note": "note-0",
+          "label": "PERSON",
+          "text": "Hernandez, Mario"
+        },
+        {
+          "note": "note-2",
+          "label": "ADDRESS",
+          "text": "754 Laura Square Apt. 194"
+        },
+        {
+          "note": "note-2",
+          "label": "ZIP",
+          "text": "89682"
+        },
+        {
+          "note": "note-3",
+          "label": "ADDRESS",
+          "text": "18955 Wheeler Prairie Suite 114"
+        },
+        {
+          "note": "note-5",
+          "label": "DATE_OF_BIRTH",
+          "text": "1956-03-24"
+        },
+        {
+          "note": "note-6",
+          "label": "ADDRESS",
+          "text": "9244 Dustin Place"
+        },
+        {
+          "note": "note-7",
+          "label": "ADDRESS",
+          "text": "31372 Matthew Center Apt. 092"
+        },
+        {
+          "note": "note-7",
+          "label": "ZIP",
+          "text": "52676"
+        },
+        {
+          "note": "note-8",
+          "label": "ADDRESS",
+          "text": "7741 Curtis Junctions Suite 728"
+        },
+        {
+          "note": "note-8",
+          "label": "ZIP",
+          "text": "79442"
+        },
+        {
+          "note": "note-9",
+          "label": "ADDRESS",
+          "text": "88853 Linda Viaduct Suite 338"
+        },
+        {
+          "note": "note-9",
+          "label": "ZIP",
+          "text": "34725"
+        },
+        {
+          "note": "note-10",
+          "label": "MEMBER_ID",
+          "text": "VNE-55131373"
+        },
+        {
+          "note": "note-11",
+          "label": "ADDRESS",
+          "text": "222 Edward Mountain"
+        },
+        {
+          "note": "note-11",
+          "label": "LOCATION",
+          "text": "Christopherfurt"
+        },
+        {
+          "note": "note-11",
+          "label": "ZIP",
+          "text": "53111"
+        },
+        {
+          "note": "note-12",
+          "label": "PERSON",
+          "text": "Thomas, Lindsay"
+        },
+        {
+          "note": "note-12",
+          "label": "ADDRESS",
+          "text": "263 Anthony Forest"
+        },
+        {
+          "note": "note-13",
+          "label": "DATE",
+          "text": "June 03, 2026"
+        },
+        {
+          "note": "note-13",
+          "label": "ADDRESS",
+          "text": "282 Monique Trail Apt. 902"
+        },
+        {
+          "note": "note-14",
+          "label": "ZIP",
+          "text": "07948"
+        },
+        {
+          "note": "note-15",
+          "label": "MEMBER_ID",
+          "text": "CUE-48372616"
+        },
+        {
+          "note": "note-16",
+          "label": "ADDRESS",
+          "text": "326 Morgan Flat"
+        },
+        {
+          "note": "note-17",
+          "label": "LOCATION",
+          "text": "South Martinport"
+        },
+        {
+          "note": "note-18",
+          "label": "MEMBER_ID",
+          "text": "MOE-26140141"
+        },
+        {
+          "note": "note-19",
+          "label": "ZIP",
+          "text": "41394"
+        },
+        {
+          "note": "note-20",
+          "label": "MEMBER_ID",
+          "text": "MTU-78684335"
+        },
+        {
+          "note": "note-21",
+          "label": "MEMBER_ID",
+          "text": "XVJ-07224704"
+        },
+        {
+          "note": "note-21",
+          "label": "PHONE",
+          "text": "(972) 821-8391"
+        },
+        {
+          "note": "note-23",
+          "label": "MEMBER_ID",
+          "text": "KZB-20868288"
+        },
+        {
+          "note": "note-23",
+          "label": "PHONE",
+          "text": "(469) 566-5218"
+        },
+        {
+          "note": "note-24",
+          "label": "ADDRESS",
+          "text": "817 Lamb Vista"
+        },
+        {
+          "note": "note-24",
+          "label": "ZIP",
+          "text": "09690"
+        },
+        {
+          "note": "note-25",
+          "label": "PERSON",
+          "text": "Daniel, Joseph"
+        },
+        {
+          "note": "note-25",
+          "label": "ADDRESS",
+          "text": "93192 King Summit Suite 992"
+        },
+        {
+          "note": "note-25",
+          "label": "ZIP",
+          "text": "90114"
+        },
+        {
+          "note": "note-26",
+          "label": "DATE",
+          "text": "April 24, 2026"
+        },
+        {
+          "note": "note-27",
+          "label": "DATE",
+          "text": "February 25, 2026"
+        },
+        {
+          "note": "note-27",
+          "label": "ADDRESS",
+          "text": "91284 Anderson Viaduct"
+        },
+        {
+          "note": "note-28",
+          "label": "ZIP",
+          "text": "64948"
+        },
+        {
+          "note": "note-29",
+          "label": "DATE",
+          "text": "October 08, 2026"
+        },
+        {
+          "note": "note-29",
+          "label": "ADDRESS",
+          "text": "4041 Mary Heights Apt. 346"
+        },
+        {
+          "note": "note-29",
+          "label": "PHONE",
+          "text": "(469) 436-5614"
+        },
+        {
+          "note": "note-30",
+          "label": "MEMBER_ID",
+          "text": "JIK-06792470"
+        },
+        {
+          "note": "note-31",
+          "label": "DATE",
+          "text": "October 07, 2026"
+        },
+        {
+          "note": "note-32",
+          "label": "ADDRESS",
+          "text": "4507 Andrews Lake"
+        },
+        {
+          "note": "note-33",
+          "label": "ZIP",
+          "text": "85146"
+        },
+        {
+          "note": "note-37",
+          "label": "ADDRESS",
+          "text": "653 Johnson Junction"
+        },
+        {
+          "note": "note-37",
+          "label": "ZIP",
+          "text": "88904"
+        },
+        {
+          "note": "note-38",
+          "label": "MEMBER_ID",
+          "text": "OFA-34419792"
+        },
+        {
+          "note": "note-39",
+          "label": "MEMBER_ID",
+          "text": "KGA-87046557"
+        },
+        {
+          "note": "note-40",
+          "label": "MEMBER_ID",
+          "text": "DEZ-70636060"
+        },
+        {
+          "note": "note-41",
+          "label": "DATE",
+          "text": "October 09, 2026"
+        },
+        {
+          "note": "note-41",
+          "label": "ADDRESS",
+          "text": "4672 White Unions Suite 293"
+        },
+        {
+          "note": "note-41",
+          "label": "ZIP",
+          "text": "31154"
+        },
+        {
+          "note": "note-43",
+          "label": "ADDRESS",
+          "text": "32679 Julie Vista Apt. 444"
+        },
+        {
+          "note": "note-43",
+          "label": "ZIP",
+          "text": "55690"
+        },
+        {
+          "note": "note-43",
+          "label": "PHONE",
+          "text": "(206) 885-6461"
+        },
+        {
+          "note": "note-44",
+          "label": "ADDRESS",
+          "text": "831 Ritter Cove"
+        },
+        {
+          "note": "note-45",
+          "label": "PERSON",
+          "text": "Andrade, Adam"
+        }
+      ],
+      "sample_false_positives": [
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "MRN"
+        },
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "BP 114/72"
+        },
+        {
+          "note": "note-0",
+          "entity": "DATE_TIME",
+          "text": "3 months"
+        },
+        {
+          "note": "note-0",
+          "entity": "DATE_TIME",
+          "text": "6 weeks"
+        },
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-1",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-2",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-2",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-2",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-3",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-3",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-4",
+          "entity": "PERSON",
+          "text": "atorvastatin 500 mg"
+        },
+        {
+          "note": "note-4",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-4",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-4",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-4",
+          "entity": "ORGANIZATION",
+          "text": "SSN"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "MRN"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "BP 118/88"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "3 months"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "6 weeks"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-6",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-7",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-8",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-8",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-8",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-9",
+          "entity": "PERSON",
+          "text": "atorvastatin 5 mg"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "daily"
+        },
+        {
+          "note": "note-9",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-9",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-10",
+          "entity": "ORGANIZATION",
+          "text": "BlueCross"
+        },
+        {
+          "note": "note-11",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-12",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-12",
+          "entity": "PERSON",
+          "text": "apixaban"
+        },
+        {
+          "note": "note-12",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-12",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-13",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-13",
+          "entity": "ORGANIZATION",
+          "text": "escitalopram"
+        },
+        {
+          "note": "note-13",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-13",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-14",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-15",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-15",
+          "entity": "ORGANIZATION",
+          "text": "UnitedHealthcare"
+        },
+        {
+          "note": "note-16",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-17",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-17",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-17",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-17",
+          "entity": "LOCATION",
+          "text": "NY"
+        },
+        {
+          "note": "note-17",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-18",
+          "entity": "ORGANIZATION",
+          "text": "UnitedHealthcare"
+        },
+        {
+          "note": "note-19",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        }
+      ]
+    },
+    "Presidio default (threshold 0.5)": {
+      "entities": 2135,
+      "recall_any_overlap": 0.8014,
+      "recall_full": 0.7269,
+      "precision": 0.6567,
+      "note_leak_rate": 0.8167,
+      "per_label_recall_full": {
+        "ADDRESS": 0.1805,
+        "DATE": 0.8113,
+        "DATE_OF_BIRTH": 0.9521,
+        "DEA": 1.0,
+        "EMAIL": 1.0,
+        "LOCATION": 0.9023,
+        "MEMBER_ID": 0.1091,
+        "MRN": 0.664,
+        "NPI": 0.8304,
+        "PERSON": 0.9564,
+        "PHONE": 0.0638,
+        "SSN": 1.0,
+        "ZIP": 0.5564
+      },
+      "latency": {
+        "p50_ms": 42.86,
+        "p95_ms": 60.46,
+        "mean_ms": 43.77
+      },
+      "sample_misses": [
+        {
+          "note": "note-0",
+          "label": "PERSON",
+          "text": "Hernandez, Mario"
+        },
+        {
+          "note": "note-0",
+          "label": "MRN",
+          "text": "393655486"
+        },
+        {
+          "note": "note-1",
+          "label": "MRN",
+          "text": "451047120"
+        },
+        {
+          "note": "note-1",
+          "label": "PHONE",
+          "text": "206-321-9353"
+        },
+        {
+          "note": "note-2",
+          "label": "ADDRESS",
+          "text": "754 Laura Square Apt. 194"
+        },
+        {
+          "note": "note-2",
+          "label": "ZIP",
+          "text": "89682"
+        },
+        {
+          "note": "note-2",
+          "label": "PHONE",
+          "text": "305.778.0976"
+        },
+        {
+          "note": "note-3",
+          "label": "MRN",
+          "text": "853958473"
+        },
+        {
+          "note": "note-3",
+          "label": "ADDRESS",
+          "text": "18955 Wheeler Prairie Suite 114"
+        },
+        {
+          "note": "note-3",
+          "label": "PHONE",
+          "text": "503-284-9411"
+        },
+        {
+          "note": "note-5",
+          "label": "DATE_OF_BIRTH",
+          "text": "1956-03-24"
+        },
+        {
+          "note": "note-6",
+          "label": "ADDRESS",
+          "text": "9244 Dustin Place"
+        },
+        {
+          "note": "note-6",
+          "label": "PHONE",
+          "text": "415.355.3800"
+        },
+        {
+          "note": "note-7",
+          "label": "ADDRESS",
+          "text": "31372 Matthew Center Apt. 092"
+        },
+        {
+          "note": "note-7",
+          "label": "ZIP",
+          "text": "52676"
+        },
+        {
+          "note": "note-7",
+          "label": "PHONE",
+          "text": "702-825-9278"
+        },
+        {
+          "note": "note-8",
+          "label": "ADDRESS",
+          "text": "7741 Curtis Junctions Suite 728"
+        },
+        {
+          "note": "note-8",
+          "label": "ZIP",
+          "text": "79442"
+        },
+        {
+          "note": "note-8",
+          "label": "PHONE",
+          "text": "(713) 264-3122"
+        },
+        {
+          "note": "note-9",
+          "label": "ADDRESS",
+          "text": "88853 Linda Viaduct Suite 338"
+        },
+        {
+          "note": "note-9",
+          "label": "ZIP",
+          "text": "34725"
+        },
+        {
+          "note": "note-9",
+          "label": "PHONE",
+          "text": "(702) 829-0417"
+        },
+        {
+          "note": "note-10",
+          "label": "MEMBER_ID",
+          "text": "VNE-55131373"
+        },
+        {
+          "note": "note-10",
+          "label": "PHONE",
+          "text": "919-678-7870"
+        },
+        {
+          "note": "note-11",
+          "label": "ADDRESS",
+          "text": "222 Edward Mountain"
+        },
+        {
+          "note": "note-11",
+          "label": "LOCATION",
+          "text": "Christopherfurt"
+        },
+        {
+          "note": "note-11",
+          "label": "ZIP",
+          "text": "53111"
+        },
+        {
+          "note": "note-11",
+          "label": "PHONE",
+          "text": "(702) 351-8899"
+        },
+        {
+          "note": "note-12",
+          "label": "PERSON",
+          "text": "Thomas, Lindsay"
+        },
+        {
+          "note": "note-12",
+          "label": "ADDRESS",
+          "text": "263 Anthony Forest"
+        },
+        {
+          "note": "note-12",
+          "label": "PHONE",
+          "text": "206-755-8236"
+        },
+        {
+          "note": "note-13",
+          "label": "DATE",
+          "text": "June 03, 2026"
+        },
+        {
+          "note": "note-13",
+          "label": "ADDRESS",
+          "text": "282 Monique Trail Apt. 902"
+        },
+        {
+          "note": "note-13",
+          "label": "PHONE",
+          "text": "212-487-7737"
+        },
+        {
+          "note": "note-14",
+          "label": "ZIP",
+          "text": "07948"
+        },
+        {
+          "note": "note-14",
+          "label": "PHONE",
+          "text": "469-546-3348"
+        },
+        {
+          "note": "note-15",
+          "label": "MRN",
+          "text": "977865762"
+        },
+        {
+          "note": "note-15",
+          "label": "MEMBER_ID",
+          "text": "CUE-48372616"
+        },
+        {
+          "note": "note-15",
+          "label": "PHONE",
+          "text": "469-690-2924"
+        },
+        {
+          "note": "note-16",
+          "label": "MRN",
+          "text": "30580354"
+        },
+        {
+          "note": "note-16",
+          "label": "ADDRESS",
+          "text": "326 Morgan Flat"
+        },
+        {
+          "note": "note-16",
+          "label": "PHONE",
+          "text": "303.677.2394"
+        },
+        {
+          "note": "note-17",
+          "label": "LOCATION",
+          "text": "South Martinport"
+        },
+        {
+          "note": "note-17",
+          "label": "PHONE",
+          "text": "312-740-2281"
+        },
+        {
+          "note": "note-18",
+          "label": "MEMBER_ID",
+          "text": "MOE-26140141"
+        },
+        {
+          "note": "note-19",
+          "label": "ZIP",
+          "text": "41394"
+        },
+        {
+          "note": "note-19",
+          "label": "PHONE",
+          "text": "(415) 824-0064"
+        },
+        {
+          "note": "note-20",
+          "label": "MEMBER_ID",
+          "text": "MTU-78684335"
+        },
+        {
+          "note": "note-20",
+          "label": "PHONE",
+          "text": "(206) 259-4071"
+        },
+        {
+          "note": "note-21",
+          "label": "MEMBER_ID",
+          "text": "XVJ-07224704"
+        },
+        {
+          "note": "note-21",
+          "label": "PHONE",
+          "text": "(972) 821-8391"
+        },
+        {
+          "note": "note-23",
+          "label": "MEMBER_ID",
+          "text": "KZB-20868288"
+        },
+        {
+          "note": "note-23",
+          "label": "PHONE",
+          "text": "(469) 566-5218"
+        },
+        {
+          "note": "note-24",
+          "label": "ADDRESS",
+          "text": "817 Lamb Vista"
+        },
+        {
+          "note": "note-24",
+          "label": "ZIP",
+          "text": "09690"
+        },
+        {
+          "note": "note-24",
+          "label": "PHONE",
+          "text": "(617) 725-1053"
+        },
+        {
+          "note": "note-25",
+          "label": "PERSON",
+          "text": "Daniel, Joseph"
+        },
+        {
+          "note": "note-25",
+          "label": "MRN",
+          "text": "881229140"
+        },
+        {
+          "note": "note-25",
+          "label": "ADDRESS",
+          "text": "93192 King Summit Suite 992"
+        },
+        {
+          "note": "note-25",
+          "label": "ZIP",
+          "text": "90114"
+        }
+      ],
+      "sample_false_positives": [
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "MRN"
+        },
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "BP 114/72"
+        },
+        {
+          "note": "note-0",
+          "entity": "DATE_TIME",
+          "text": "3 months"
+        },
+        {
+          "note": "note-0",
+          "entity": "DATE_TIME",
+          "text": "6 weeks"
+        },
+        {
+          "note": "note-0",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-1",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-2",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-2",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-2",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-3",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-3",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-4",
+          "entity": "PERSON",
+          "text": "atorvastatin 500 mg"
+        },
+        {
+          "note": "note-4",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-4",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-4",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-4",
+          "entity": "ORGANIZATION",
+          "text": "SSN"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "MRN"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "BP 118/88"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "3 months"
+        },
+        {
+          "note": "note-5",
+          "entity": "DATE_TIME",
+          "text": "6 weeks"
+        },
+        {
+          "note": "note-5",
+          "entity": "ORGANIZATION",
+          "text": "NPI"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-6",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-6",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "every 12 hours"
+        },
+        {
+          "note": "note-7",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-7",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-8",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-8",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-8",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-9",
+          "entity": "PERSON",
+          "text": "atorvastatin 5 mg"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "daily"
+        },
+        {
+          "note": "note-9",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-9",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-9",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-10",
+          "entity": "ORGANIZATION",
+          "text": "BlueCross"
+        },
+        {
+          "note": "note-11",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-12",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-12",
+          "entity": "PERSON",
+          "text": "apixaban"
+        },
+        {
+          "note": "note-12",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-12",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-13",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-13",
+          "entity": "ORGANIZATION",
+          "text": "escitalopram"
+        },
+        {
+          "note": "note-13",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-13",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-14",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-15",
+          "entity": "DATE_TIME",
+          "text": "12 hours"
+        },
+        {
+          "note": "note-15",
+          "entity": "ORGANIZATION",
+          "text": "UnitedHealthcare"
+        },
+        {
+          "note": "note-16",
+          "entity": "DATE_TIME",
+          "text": "this week"
+        },
+        {
+          "note": "note-17",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        },
+        {
+          "note": "note-17",
+          "entity": "PERSON",
+          "text": "rosuvastatin"
+        },
+        {
+          "note": "note-17",
+          "entity": "ORGANIZATION",
+          "text": "NSAIDs"
+        },
+        {
+          "note": "note-17",
+          "entity": "LOCATION",
+          "text": "NY"
+        },
+        {
+          "note": "note-17",
+          "entity": "DATE_TIME",
+          "text": "1-2 weeks"
+        },
+        {
+          "note": "note-18",
+          "entity": "ORGANIZATION",
+          "text": "UnitedHealthcare"
+        },
+        {
+          "note": "note-19",
+          "entity": "DATE_TIME",
+          "text": "4 days"
+        }
+      ]
+    },
+    "Clinical recognizers (ours, 0.5)": {
+      "entities": 2135,
+      "recall_any_overlap": 0.992,
+      "recall_full": 0.9738,
+      "precision": 1.0,
+      "note_leak_rate": 0.1767,
+      "per_label_recall_full": {
+        "ADDRESS": 0.9398,
+        "DATE": 1.0,
+        "DATE_OF_BIRTH": 1.0,
+        "DEA": 1.0,
+        "EMAIL": 1.0,
+        "LOCATION": 0.985,
+        "MEMBER_ID": 1.0,
+        "MRN": 1.0,
+        "NPI": 1.0,
+        "PERSON": 0.9397,
+        "PHONE": 1.0,
+        "SSN": 1.0,
+        "ZIP": 0.9248
+      },
+      "latency": {
+        "p50_ms": 36.96,
+        "p95_ms": 49.74,
+        "mean_ms": 37.39
+      },
+      "sample_misses": [
+        {
+          "note": "note-12",
+          "label": "PERSON",
+          "text": "Thomas, Lindsay"
+        },
+        {
+          "note": "note-14",
+          "label": "ADDRESS",
+          "text": "40187 Kathleen Circles"
+        },
+        {
+          "note": "note-24",
+          "label": "ZIP",
+          "text": "09690"
+        },
+        {
+          "note": "note-25",
+          "label": "PERSON",
+          "text": "Daniel, Joseph"
+        },
+        {
+          "note": "note-29",
+          "label": "PERSON",
+          "text": "Sanders, Matthew"
+        },
+        {
+          "note": "note-31",
+          "label": "ADDRESS",
+          "text": "5762 John Extensions"
+        },
+        {
+          "note": "note-45",
+          "label": "PERSON",
+          "text": "Andrade, Adam"
+        },
+        {
+          "note": "note-50",
+          "label": "PERSON",
+          "text": "Turner, Linda"
+        },
+        {
+          "note": "note-51",
+          "label": "ZIP",
+          "text": "25744"
+        },
+        {
+          "note": "note-52",
+          "label": "PERSON",
+          "text": "Strickland, Melinda"
+        },
+        {
+          "note": "note-53",
+          "label": "ADDRESS",
+          "text": "215 Brian Parkways"
+        },
+        {
+          "note": "note-53",
+          "label": "LOCATION",
+          "text": "Ryanland"
+        },
+        {
+          "note": "note-53",
+          "label": "ZIP",
+          "text": "58430"
+        },
+        {
+          "note": "note-55",
+          "label": "PERSON",
+          "text": "Johnson, Luis"
+        },
+        {
+          "note": "note-61",
+          "label": "ADDRESS",
+          "text": "844 Christopher Parkways Apt. 243"
+        },
+        {
+          "note": "note-65",
+          "label": "ADDRESS",
+          "text": "9874 Kristina Burgs Suite 815"
+        },
+        {
+          "note": "note-73",
+          "label": "ZIP",
+          "text": "64705"
+        },
+        {
+          "note": "note-76",
+          "label": "PERSON",
+          "text": "Martin, Steven"
+        },
+        {
+          "note": "note-77",
+          "label": "PERSON",
+          "text": "Wolf, Wendy"
+        },
+        {
+          "note": "note-97",
+          "label": "ZIP",
+          "text": "31156"
+        },
+        {
+          "note": "note-113",
+          "label": "PERSON",
+          "text": "Rodriguez, Jill"
+        },
+        {
+          "note": "note-115",
+          "label": "ZIP",
+          "text": "80203"
+        },
+        {
+          "note": "note-123",
+          "label": "PERSON",
+          "text": "Lopez, Michael"
+        },
+        {
+          "note": "note-134",
+          "label": "PERSON",
+          "text": "Freeman, Summer"
+        },
+        {
+          "note": "note-135",
+          "label": "PERSON",
+          "text": "Foster, Anthony"
+        },
+        {
+          "note": "note-141",
+          "label": "PERSON",
+          "text": "Cunningham, Alyssa"
+        },
+        {
+          "note": "note-142",
+          "label": "PERSON",
+          "text": "Fitzgerald, Heather"
+        },
+        {
+          "note": "note-150",
+          "label": "PERSON",
+          "text": "Stephenson, Emily"
+        },
+        {
+          "note": "note-153",
+          "label": "PERSON",
+          "text": "Nelson, Adam"
+        },
+        {
+          "note": "note-154",
+          "label": "PERSON",
+          "text": "Destiny Perry"
+        },
+        {
+          "note": "note-166",
+          "label": "ADDRESS",
+          "text": "979 Yvonne Circles Suite 838"
+        },
+        {
+          "note": "note-173",
+          "label": "PERSON",
+          "text": "Carter, Sara"
+        },
+        {
+          "note": "note-173",
+          "label": "ZIP",
+          "text": "02529"
+        },
+        {
+          "note": "note-188",
+          "label": "LOCATION",
+          "text": "Jeanetteland"
+        },
+        {
+          "note": "note-190",
+          "label": "PERSON",
+          "text": "Bautista, Amanda"
+        },
+        {
+          "note": "note-194",
+          "label": "PERSON",
+          "text": "Morrow, Bob"
+        },
+        {
+          "note": "note-207",
+          "label": "ZIP",
+          "text": "66649"
+        },
+        {
+          "note": "note-208",
+          "label": "PERSON",
+          "text": "Rivera, Susan"
+        },
+        {
+          "note": "note-210",
+          "label": "PERSON",
+          "text": "Phillips, Mary"
+        },
+        {
+          "note": "note-219",
+          "label": "PERSON",
+          "text": "Davis, Michael"
+        },
+        {
+          "note": "note-224",
+          "label": "PERSON",
+          "text": "Fritz, Jennifer"
+        },
+        {
+          "note": "note-229",
+          "label": "PERSON",
+          "text": "Patrick May"
+        },
+        {
+          "note": "note-230",
+          "label": "PERSON",
+          "text": "Wilson, Clayton"
+        },
+        {
+          "note": "note-233",
+          "label": "PERSON",
+          "text": "Jacobs, Victor"
+        },
+        {
+          "note": "note-236",
+          "label": "ZIP",
+          "text": "00521"
+        },
+        {
+          "note": "note-238",
+          "label": "ZIP",
+          "text": "14146"
+        },
+        {
+          "note": "note-241",
+          "label": "PERSON",
+          "text": "Erickson, Nathan"
+        },
+        {
+          "note": "note-243",
+          "label": "PERSON",
+          "text": "Rivers, Mike"
+        },
+        {
+          "note": "note-244",
+          "label": "ADDRESS",
+          "text": "10213 Glenn Extensions Suite 300"
+        },
+        {
+          "note": "note-249",
+          "label": "ADDRESS",
+          "text": "23703 Wilson Parkways"
+        },
+        {
+          "note": "note-254",
+          "label": "PERSON",
+          "text": "Henry, Ruth"
+        },
+        {
+          "note": "note-255",
+          "label": "PERSON",
+          "text": "Fleming, Melinda"
+        },
+        {
+          "note": "note-285",
+          "label": "PERSON",
+          "text": "Perry, Alan"
+        },
+        {
+          "note": "note-291",
+          "label": "PERSON",
+          "text": "Walker, Emily"
+        },
+        {
+          "note": "note-294",
+          "label": "PERSON",
+          "text": "Moore, Dana"
+        },
+        {
+          "note": "note-297",
+          "label": "PERSON",
+          "text": "Quinn, Karen"
+        }
+      ],
+      "sample_false_positives": []
+    }
+  }
+}

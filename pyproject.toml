@@ -1,0 +1,77 @@
+[project]
+name = "clinical-guardrail-proxy"
+version = "0.1.0"
+description = "OpenAI-compatible guardrail proxy for clinical LLM apps: PHI pseudonymization, prompt-injection detection and LLM-as-judge hallucination checks."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "pyyaml>=6.0",
+    "openai>=1.40",
+    "httpx>=0.27",
+    "presidio-analyzer>=2.2.355",
+    "presidio-anonymizer>=2.2.355",
+    "spacy>=3.8,<3.9",
+    "en-core-web-md",
+    "transformers>=4.44",
+    "torch>=2.3",
+    "prometheus-client>=0.20",
+    "faker>=26.0",
+    "pandas>=2.2",
+    "pyarrow>=16.0",
+    "huggingface-hub>=0.24",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.37"]
+nli = ["sentence-transformers>=3.0"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+guardrail-proxy = "guardrail_proxy.cli:serve"
+guardrail-eval = "guardrail_proxy.evals.run:main"
+guardrail-data = "guardrail_proxy.evals.datasets:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/guardrail_proxy"]
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform != 'darwin'" }]
+en-core-web-md = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "slow: loads ML models (DeBERTa / spaCy); deselect with -m 'not slow'",
+    "llm: needs a running Ollama with the configured models",
+]
+addopts = "-m 'not llm'"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+# E501: long string literals are fine; `ruff format` owns line length for code.
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]

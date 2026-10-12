@@ -1,0 +1,46 @@
+# Guard policy for a clinical assistant.
+#
+#   action     what happens when the guard's risk score >= threshold
+#              allow | flag (annotate, still respond) | redact (rewrite text) | block
+#   fail_mode  what happens if the guard errors or exceeds timeout_s
+#              closed -> block the request, open -> let it through but flag it
+name: clinical-default
+on_block: error            # error -> HTTP 400 OpenAI-style error; refusal -> 200 with a canned refusal
+refusal_message: >-
+  I can't process this request because it was flagged by the clinical safety policy.
+
+input_guards:
+  prompt_injection:
+    action: block
+    threshold: 0.5
+    timeout_s: 5.0
+    fail_mode: closed      # an unscanned prompt never reaches the model
+    params:
+      detectors: [heuristic, classifier]   # drop "classifier" to run regex-only
+      ensemble: tiered                     # tiered: regex hit -> block, classifier-only hit -> flag
+                                           # max: either detector blocks | mean: average the scores
+      scan_context: true                   # also scan RAG context docs (indirect injection)
+
+  phi:
+    action: redact         # reversible pseudonymization: the LLM sees <PERSON_1>, the user sees the real name
+    threshold: 0.5         # minimum Presidio confidence to treat a span as PHI
+    timeout_s: 5.0
+    fail_mode: closed      # never send raw PHI upstream because a detector crashed
+    params:
+      scan_context: true
+
+output_guards:
+  phi_leak:
+    action: redact         # PHI in the answer that the user never supplied gets masked
+    threshold: 0.5
+    timeout_s: 5.0
+    fail_mode: closed
+
+  hallucination:
+    action: flag           # flag | block. Flag keeps the answer but marks unsupported claims
+    threshold: 0.2         # risk = share of claims not supported by the grounding context
+    timeout_s: 60.0
+    fail_mode: open        # judge outage degrades to "unverified", it does not take the app down
+    params:
+      backend: llm         # llm (claim-level LLM judge) | nli (cross-encoder entailment, faster)
+      annotate: true       # append a visible "could not be verified" notice when flagged

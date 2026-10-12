@@ -1,0 +1,22 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes: ["ollama:/root/.ollama"]
+    ports: ["11434:11434"]
+    # Uncomment for NVIDIA GPUs:
+    # deploy: {resources: {reservations: {devices: [{driver: nvidia, count: all, capabilities: [gpu]}]}}}
+
+  proxy:
+    build: .
+    depends_on: [ollama]
+    ports: ["8000:8000"]
+    environment:
+      GUARDRAIL_UPSTREAM_BASE_URL: http://ollama:11434/v1
+      GUARDRAIL_JUDGE_BASE_URL: http://ollama:11434/v1
+      GUARDRAIL_AUDIT_HMAC_KEY: ${GUARDRAIL_AUDIT_HMAC_KEY:-change-me}
+      GUARDRAIL_AUDIT_DB_PATH: /app/data/audit/audit.db
+    volumes: ["audit:/app/data/audit"]
+
+volumes:
+  ollama:
+  audit:
