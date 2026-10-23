@@ -174,8 +174,8 @@ Evaluation suites run on synthetic clinical datasets with exact ground-truth lab
 
 ```bash
 # Clone repository
-git clone https://github.com/awat/clinical-guardrail-proxy.git
-cd clinical-guardrail-proxy
+git clone https://github.com/vikramT75/cliniguard
+cd cliniguard
 
 # Install dependencies (CPU PyTorch, spaCy model, Presidio, Transformers)
 uv sync --all-extras
